@@ -1,0 +1,4 @@
+flask
+xgboost
+pandas
+joblib

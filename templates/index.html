@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Real Estate Price Prediction</h1>
+        <form id="prediction-form">
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="Casablanca">Casablanca</option>
+                <option value="Marrakech">Marrakech</option>
+                <option value="Rabat">Rabat</option>
+                <option value="Agadir">Agadir</option>
+                <option value="Fez">Fez</option>
+                <option value="Tangier">Tangier</option>
+            </select><br><br>
+            
+            <label for="property_type">Property Type:</label>
+            <select id="property_type" name="property_type">
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+            </select><br><br>
+
+            <label for="surface">Surface (in m²):</label>
+            <input type="number" id="surface" name="surface" required><br><br>
+
+            <label for="bedroom">Number of Bedrooms:</label>
+            <input type="number" id="bedroom" name="bedroom" required><br><br>
+
+            <label for="bathroom">Number of Bathrooms:</label>
+            <input type="number" id="bathroom" name="bathroom" required><br><br>
+
+            <label for="principale">Main Property (Optional):</label>
+            <input type="text" id="principale" name="principale"><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h2>Predicted Price: <span id="predicted-price"></span> MAD</h2>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
